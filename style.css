@@ -1,0 +1,120 @@
+/* Reset margins and paddings for consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 4vw;
+}
+
+/* Button styles */
+#loveButton {
+    padding: 2vw 4vw;
+    font-size: 2.5vw;
+    background-color: #f8419c;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 2vw;
+}
+
+/* Pre-GIF */
+#preGif {
+    width: 30vw;
+    height: auto;
+    margin-bottom: 3vw;
+    transition: transform 0.3s;
+}
+
+/* Hover effect for interactive GIF */
+#preGif:hover {
+    transform: scale(1.2);  /* Slightly increase the size on hover */
+}
+
+/* Explosion GIF */
+#explosionGif {
+    display: none;
+    margin: 20px auto;
+    width: 40vw;
+    height: auto; /* Adjust for responsiveness */
+}
+
+/* Post-explosion message */
+#message {
+    display: none;
+    margin-top: 3vw;
+    font-size: 3vw;
+    color: #000000;
+}
+
+/* Post-GIF */
+#postGif {
+    width: 30vw;
+    height: auto;
+    margin-top: 3vw;
+}
+
+/* Media Queries for smaller devices (mobile) */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 6vw;
+    }
+
+    #loveButton {
+        padding: 3vw 6vw;
+        font-size: 3vw;
+    }
+
+    #preGif {
+        width: 50vw;
+    }
+
+    #explosionGif {
+        width: 50vw;
+    }
+
+    #message {
+        font-size: 5vw;
+    }
+
+    #postGif {
+        width: 50vw;
+    }
+}
+
+/* Larger screens (e.g., tablets, desktops) */
+@media (min-width: 1024px) {
+    #preGif, #postGif {
+        width: 20vw;
+    }
+
+    #explosionGif {
+        width: 30vw;
+    }
+
+    #loveButton {
+        font-size: 1.5vw;
+    }
+
+    h1 {
+        font-size: 3vw;
+    }
+}
